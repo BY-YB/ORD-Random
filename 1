@@ -1,0 +1,38 @@
+based on html
+<form action="">
+	<input type="number" name="1티어">
+	<br>
+	<input type="number" name="2티어">
+	<br>
+	<input type="number" name="3티어">
+	<br>
+	<input type="submit" value="입력">
+</form>
+
+based on R
+
+install.packages("pandas")
+library('random','pandas')
+random.sample()
+a<-read.csv(file.choose(),header=T)
+a1<-as.data.frame(a)
+a2<-subset(a1[1],a[2]==1)
+a2
+l1<-length.POSIXlt(a2)
+r1<-randomNumbers(n=2,min=1,max=l1,col=1,check=F)
+r2<-as.integer(r1)
+r22<-sort(r2)
+con1<-a1[r22,]
+
+
+b2<-subset(a1[1],a[2]==2)
+l2<-length.POSIXlt(b2)
+r3<-randomNumbers(n=4,min=l1+1,max=l1+l2,col=1,check=F)
+r4<-as.integer(r3)
+r44<-sort(r4)
+r44
+
+con2<-a1[r44,]
+
+con<-rbind(con1,con2)
+
